@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Portfolio
-//
-//  Created by max bareham on 01/04/2019.
-//  Copyright © 2019 max bareham. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
