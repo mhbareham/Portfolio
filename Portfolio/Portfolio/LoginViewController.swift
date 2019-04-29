@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     func handleError(_ error: Error?) {
         guard let error = error else {
-            print("dunno what went wrong")
+            print("Big Error")
             return
         }
         let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
