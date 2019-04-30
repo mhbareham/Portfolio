@@ -26,9 +26,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN0-ca-GM6">
                                 <rect key="frame" x="117" y="220" width="141" height="30"/>
-                                <state key="normal" title="Upload Profile Photo"/>
+                                <state key="normal" title="Upload Photo"/>
                                 <connections>
-                                    <action selector="uploadProfileImage:" destination="bft-GR-xOg" eventType="touchUpInside" id="vXf-Rj-XS4"/>
+                                    <action selector="uploadPhoto:" destination="bft-GR-xOg" eventType="touchUpInside" id="04k-Tn-ily"/>
                                 </connections>
                             </button>
                         </subviews>

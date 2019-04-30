@@ -8,7 +8,7 @@ class MainViewController: UIViewController {
         AppManager.shared.logout()
     }
     
-    @IBAction func uploadProfileImage(_ sender: Any) {
+    @IBAction func uploadPhoto(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = [kUTTypeImage as String]
@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 }
+
 
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
