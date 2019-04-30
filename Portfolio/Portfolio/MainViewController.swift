@@ -8,17 +8,13 @@ class MainViewController: UIViewController {
         AppManager.shared.logout()
     }
     
-    @IBAction func uploadProfilePhoto(_ sender: Any) {
+    @IBAction func uploadProfileImage(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = [kUTTypeImage as String]
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//    }
 }
 
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

@@ -19,8 +19,13 @@ class LoginViewController: UIViewController {
             }
             self.dismiss(animated: true, completion: nil)
         }
+        
     }
     
+    func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:String?)->())){
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference().child("user/\(uid)")
+    }
     
     func handleError(_ error: Error?) {
         guard let error = error else {

@@ -17,24 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDi-me-ubn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDi-me-ubn">
                                 <rect key="frame" x="152" y="541" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SIGN OUT"/>
                                 <connections>
                                     <action selector="signOut:" destination="bft-GR-xOg" eventType="touchUpInside" id="cbl-L7-gQ8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN0-ca-GM6">
-                                <rect key="frame" x="117" y="191" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN0-ca-GM6">
+                                <rect key="frame" x="117" y="220" width="141" height="30"/>
                                 <state key="normal" title="Upload Profile Photo"/>
                                 <connections>
-                                    <action selector="uploadProfilePhoto:" destination="bft-GR-xOg" eventType="touchUpInside" id="nDP-7l-eXU"/>
+                                    <action selector="uploadProfileImage:" destination="bft-GR-xOg" eventType="touchUpInside" id="vXf-Rj-XS4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92309766013862182" blue="0.97858677574437469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="DDi-me-ubn" firstAttribute="leading" secondItem="5Z0-Pn-ZjT" secondAttribute="leading" constant="152" id="X71-71-V6L"/>
+                            <constraint firstItem="5Z0-Pn-ZjT" firstAttribute="trailing" secondItem="cN0-ca-GM6" secondAttribute="trailing" constant="117" id="XxZ-Ev-m24"/>
+                            <constraint firstItem="5Z0-Pn-ZjT" firstAttribute="trailing" secondItem="DDi-me-ubn" secondAttribute="trailing" constant="152" id="YdX-ad-Z6e"/>
+                            <constraint firstItem="cN0-ca-GM6" firstAttribute="leading" secondItem="5Z0-Pn-ZjT" secondAttribute="leading" constant="117" id="irp-j1-wwk"/>
+                            <constraint firstItem="DDi-me-ubn" firstAttribute="top" secondItem="cN0-ca-GM6" secondAttribute="bottom" constant="291" id="n0e-K7-IgZ"/>
+                            <constraint firstItem="5Z0-Pn-ZjT" firstAttribute="bottom" secondItem="DDi-me-ubn" secondAttribute="bottom" constant="96" id="uuP-jW-E96"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Z0-Pn-ZjT"/>
                     </view>
                 </viewController>
