@@ -44,7 +44,7 @@ class NewsFeedViewController: UIViewController {
             count = 0
         }
         let post = posts[count]
-        textField.text = post.imageDownloadURL
+        textField.text = post.caption
         loadImage(for: post)
         
     }

@@ -2,7 +2,7 @@ import UIKit
 import Firebase
 import MobileCoreServices
 
-class PostViewController: UIViewController {
+class PostsViewController: UIViewController {
     
 @IBAction func signOut(_ sender: Any) {
     AppManager.shared.logout()
@@ -21,6 +21,7 @@ class PostViewController: UIViewController {
     @IBAction func uploadButton(_ sender: Any) {
         let image = self.imagePreview!
         save(post)
+        presentedViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -50,7 +51,7 @@ class PostViewController: UIViewController {
 }
 
     
-extension PostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension PostsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
