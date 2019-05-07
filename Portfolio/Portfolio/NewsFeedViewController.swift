@@ -14,7 +14,7 @@ class NewsFeedViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         count = 0
         loadPosts {
@@ -26,24 +26,28 @@ class NewsFeedViewController: UIViewController {
         let ref = Firestore.firestore().collection("posts")
         ref.getDocuments { snapshot, error in
             self.posts.removeAll()
+            
             for document in snapshot!.documents {
                 let post = Post(document: document)
                 self.posts.append(post)
             }
+            self.posts.sort(by: { $0.created.dateValue() > $1.created.dateValue() })
             completion()
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        count += 1
         showNextPost()
     }
     
     func showNextPost() {
-        count += 1
+        
         if count == posts.count {
             count = 0
         }
         let post = posts[count]
+        print(post)
         textField.text = post.caption
         loadImage(for: post)
         

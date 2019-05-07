@@ -21,7 +21,7 @@ class PostsViewController: UIViewController {
     @IBAction func uploadButton(_ sender: Any) {
         let image = self.imagePreview!
         save(post)
-        presentedViewController?.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -59,7 +59,7 @@ extension PostsViewController: UIImagePickerControllerDelegate, UINavigationCont
         let image = info[.originalImage] as! UIImage
         post.image = image
             self.imagePreview.image = image
-        post.caption = "\(captionText.text!), \(Date().description)"
+        post.caption = captionText.text!
         dismiss(animated:true, completion: nil)
     }
 }
