@@ -16,6 +16,7 @@
 		6D6CA8642256247D00983B2D /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CA8632256247D00983B2D /* AppContainerViewController.swift */; };
 		6D6CA866225625E600983B2D /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CA865225625E600983B2D /* AppManager.swift */; };
 		6D6CA868225629E700983B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CA867225629E700983B2D /* MainViewController.swift */; };
+		6DCA6CF02281B6BD008B46CD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA6CEF2281B6BD008B46CD /* Post.swift */; };
 		86FB6AE3A762B99A0F75D97C /* Pods_Portfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72062CBB32EF52ECCFB9FE77 /* Pods_Portfolio.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		6D6CA8632256247D00983B2D /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		6D6CA865225625E600983B2D /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		6D6CA867225629E700983B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6DCA6CEF2281B6BD008B46CD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		72062CBB32EF52ECCFB9FE77 /* Pods_Portfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Portfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3C3EB6FC22520EFD00F67A6D /* AppDelegate.swift */,
+				6DCA6CEF2281B6BD008B46CD /* Post.swift */,
 				3C3EB6FE22520EFD00F67A6D /* LoginViewController.swift */,
 				6D6CA8632256247D00983B2D /* AppContainerViewController.swift */,
 				6D6CA865225625E600983B2D /* AppManager.swift */,
@@ -232,6 +235,7 @@
 				3C3EB6FF22520EFD00F67A6D /* LoginViewController.swift in Sources */,
 				3C3EB6FD22520EFD00F67A6D /* AppDelegate.swift in Sources */,
 				6D6CA8642256247D00983B2D /* AppContainerViewController.swift in Sources */,
+				6DCA6CF02281B6BD008B46CD /* Post.swift in Sources */,
 				6D6CA866225625E600983B2D /* AppManager.swift in Sources */,
 				6D6CA868225629E700983B2D /* MainViewController.swift in Sources */,
 			);

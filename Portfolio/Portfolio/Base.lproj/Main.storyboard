@@ -24,8 +24,35 @@
                                     <action selector="signOut:" destination="bft-GR-xOg" eventType="touchUpInside" id="cbl-L7-gQ8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unM-BN-WgH">
+                                <rect key="frame" x="172" y="487" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="uploadButton:" destination="bft-GR-xOg" eventType="touchUpInside" id="2o2-MT-QMH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWr-l3-Img">
+                                <rect key="frame" x="41" y="111" width="293" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVu-H8-JhA">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBt-1P-lRL">
+                                <rect key="frame" x="153" y="166" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Photo"/>
+                                <connections>
+                                    <action selector="getPhotoButton:" destination="bft-GR-xOg" eventType="touchUpInside" id="Nhx-mU-lxG"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.92309766013862182" blue="0.97858677574437469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DDi-me-ubn" firstAttribute="leading" secondItem="5Z0-Pn-ZjT" secondAttribute="leading" constant="152" id="X71-71-V6L"/>
                             <constraint firstItem="5Z0-Pn-ZjT" firstAttribute="trailing" secondItem="DDi-me-ubn" secondAttribute="trailing" constant="152" id="YdX-ad-Z6e"/>
@@ -33,10 +60,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Z0-Pn-ZjT"/>
                     </view>
+                    <connections>
+                        <outlet property="captionText" destination="nWr-l3-Img" id="Abg-wI-0ez"/>
+                        <outlet property="imagePreview" destination="UVu-H8-JhA" id="CcH-bz-mjk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMt-dP-JuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-605"/>
+            <point key="canvasLocation" x="132" y="-605.84707646176912"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
