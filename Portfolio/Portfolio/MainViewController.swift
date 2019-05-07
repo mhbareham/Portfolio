@@ -52,8 +52,8 @@ class MainViewController: UIViewController {
             ref.getDocuments { snapshot, error in
                 for document in snapshot!.documents {
                     print(document.data())
-                    let posts = Post(document: DocumentSnapshot)
-                    self.posts.append(posts)
+//                    let posts = Post(document: DocumentSnapshot)
+//                    self.posts.append(posts)
                 }
             }
         }
