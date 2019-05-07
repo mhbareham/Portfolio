@@ -6,6 +6,10 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var textField: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBAction func signOutButton(_ sender: Any) {
+            AppManager.shared.logout()
+    }
+    
     var posts = [Post]()
     var count = 0
     

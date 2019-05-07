@@ -4,9 +4,10 @@ import MobileCoreServices
 
 class PostsViewController: UIViewController {
     
-@IBAction func signOut(_ sender: Any) {
-    AppManager.shared.logout()
-}
+//@IBAction func signOut(_ sender: Any) {
+//    AppManager.shared.logout()
+//}
+    
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var captionText: UITextField!
     var post = Post()
