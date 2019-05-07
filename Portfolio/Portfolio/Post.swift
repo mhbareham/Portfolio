@@ -9,15 +9,18 @@ class Post {
     var imageDownloadURL: String?
     var image: UIImage!
     
-    init() { }
-    
     init(image: UIImage, caption: String) {
         self.image = image
         self.caption = caption
     }
     
-//    init(document: DocumentSnapshot){
-//    }
+    init() { }
+    
+    init(document: DocumentSnapshot) {
+        let data = document.data()!
+        caption = data["caption"] as? String
+        imageDownloadURL = data["imageDownloadURL"] as? String
+    }
     
     func toDict() -> [String: Any] {
         return [
