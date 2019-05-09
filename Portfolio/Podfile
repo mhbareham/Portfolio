@@ -11,6 +11,9 @@ target 'Portfolio' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
+  
+  use_frameworks!
+  pod 'TextFieldEffects', '~> 1.5'
 
   # Pods for Portfolio
 

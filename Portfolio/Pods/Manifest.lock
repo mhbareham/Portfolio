@@ -122,6 +122,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.7.0)
+  - TextFieldEffects (1.5.1)
 
 DEPENDENCIES:
   - Firebase
@@ -129,6 +130,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Messaging
   - Firebase/Storage
+  - TextFieldEffects (~> 1.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -151,6 +153,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
@@ -172,7 +175,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
 
-PODFILE CHECKSUM: 6a1706ecdf429332a170fbb8f36ff52b040c9e38
+PODFILE CHECKSUM: 17721bf1e143a6026fa6b95c55a898aa9b2d8964
 
 COCOAPODS: 1.5.3
