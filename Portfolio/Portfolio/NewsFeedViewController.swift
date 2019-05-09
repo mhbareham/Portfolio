@@ -17,7 +17,28 @@ class NewsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+//        
+//        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+//        
+//        view.addGestureRecognizer(rightSwipe)
+//        view.addGestureRecognizer(leftSwipe)
     }
+    
+//    @objc func handleSwipe(sender: UISwipeGestureRecognizer){
+//        if sender.state == .ended {
+//            switch sender.direction {
+//            case .left:
+//                count += 1
+//                showNextPost()
+//            case .right:
+//                count -= 1
+//                showNextPost()
+//            default:
+//                break
+//            }
+//        }
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,11 +61,15 @@ class NewsFeedViewController: UIViewController {
             completion()
         }
     }
+
+  
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         count += 1
         showNextPost()
     }
+    
+
     
     func showNextPost() {
         
