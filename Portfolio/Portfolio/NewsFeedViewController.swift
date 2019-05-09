@@ -25,8 +25,6 @@ class NewsFeedViewController: UIViewController {
 //        view.addGestureRecognizer(leftSwipe)
     }
     
-<<<<<<< HEAD
-=======
 //    @objc func handleSwipe(sender: UISwipeGestureRecognizer){
 //        if sender.state == .ended {
 //            switch sender.direction {
@@ -42,7 +40,6 @@ class NewsFeedViewController: UIViewController {
 //        }
 //    }
     
->>>>>>> de371ea25bc40c66831ee57b55ee1b89221f89dd
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         count = 0
