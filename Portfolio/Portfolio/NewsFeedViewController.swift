@@ -5,6 +5,7 @@ class NewsFeedViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var timestampField: UILabel!
     
     @IBAction func signOutButton(_ sender: Any) {
             AppManager.shared.logout()
@@ -18,7 +19,7 @@ class NewsFeedViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         count = 0
         loadPosts {
@@ -53,6 +54,7 @@ class NewsFeedViewController: UIViewController {
         let post = posts[count]
         print(post)
         textField.text = post.caption
+//        timestampField.text = "\(post.created.dateValue())"
         loadImage(for: post)
         
     }
