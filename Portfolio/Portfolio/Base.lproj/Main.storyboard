@@ -100,7 +100,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
                             </textView>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-pn-WfO">
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-pn-WfO">
+>>>>>>> de371ea25bc40c66831ee57b55ee1b89221f89dd
                                 <rect key="frame" x="16" y="150" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -109,6 +113,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="s37-If-sEQ" firstAttribute="top" secondItem="gCa-gO-BPJ" secondAttribute="top" constant="115" id="JdF-3o-LD4"/>
                             <constraint firstItem="s37-If-sEQ" firstAttribute="leading" secondItem="qNT-6z-njh" secondAttribute="leading" id="JrQ-gG-b5B"/>
@@ -122,6 +127,10 @@
                             <constraint firstItem="gCa-gO-BPJ" firstAttribute="trailing" secondItem="qNT-6z-njh" secondAttribute="trailing" constant="16" id="twg-dS-oiX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gCa-gO-BPJ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sWr-8F-u0r" appends="YES" id="mkF-gu-cCE"/>
+                            <outletCollection property="gestureRecognizers" destination="CSL-sf-Qw9" appends="YES" id="AuO-L5-oK9"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="xwH-XZ-9gV">
                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="zyM-xG-Om8">
@@ -142,6 +151,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpm-6r-3kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="sWr-8F-u0r"/>
+                <swipeGestureRecognizer direction="right" id="CSL-sf-Qw9"/>
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="-841.52923538230891"/>
         </scene>
