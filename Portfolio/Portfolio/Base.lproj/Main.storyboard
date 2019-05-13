@@ -105,7 +105,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="banner 1" translatesAutoresizingMaskIntoConstraints="NO" id="heH-jO-3Iu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="banner milli" translatesAutoresizingMaskIntoConstraints="NO" id="heH-jO-3Iu">
                                 <rect key="frame" x="0.0" y="88" width="415" height="79"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s37-If-sEQ">
@@ -308,6 +308,6 @@
     </scenes>
     <resources>
         <image name="Icon" width="421" height="420"/>
-        <image name="banner 1" width="1125" height="420"/>
+        <image name="banner milli" width="4902" height="933"/>
     </resources>
 </document>
