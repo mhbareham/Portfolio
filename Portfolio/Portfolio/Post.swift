@@ -13,6 +13,7 @@ class Post: CustomStringConvertible {
     var imageDownloadURL: String?
     var image: UIImage!
     var created: Timestamp!
+  //  var userEmail: 
     
     init(image: UIImage, caption: String) {
         self.image = image
