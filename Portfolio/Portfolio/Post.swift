@@ -4,7 +4,7 @@ import Firebase
 class Post: CustomStringConvertible {
     
     var description: String {
-        return "\(created.dateValue()) - \(caption)"
+        return "\(created.dateValue()) - \(caption!)"
     }
     
     var posts = [Post]()
@@ -13,7 +13,7 @@ class Post: CustomStringConvertible {
     var imageDownloadURL: String?
     var image: UIImage!
     var created: Timestamp!
-  //  var userEmail: 
+    var username: String!
     
     init(image: UIImage, caption: String) {
         self.image = image
@@ -26,14 +26,16 @@ class Post: CustomStringConvertible {
         let data = document.data()!
         caption = data["caption"] as? String
         imageDownloadURL = data["imageDownloadURL"] as? String
-        created = data["created"] as! Timestamp
+        created = data["created"] as? Timestamp
+        username = data["username"] as? String
     }
     
     func toDict() -> [String: Any] {
         return [
             "caption": caption,
             "imageDownloadURL": imageDownloadURL!,
-            "created": Timestamp()
+            "created": Timestamp(),
+            "username": username
         ]
     }
     

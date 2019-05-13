@@ -3,9 +3,11 @@ import Firebase
 
 class NewsFeedViewController: UIViewController {
 
+    @IBOutlet weak var addPostButton: UIBarButtonItem!
     @IBOutlet weak var textField: UITextView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var timestampField: UILabel!
+    @IBOutlet weak var usernameField: UILabel!
+    var username: String!
     
     @IBAction func signOutButton(_ sender: Any) {
             AppManager.shared.logout()
@@ -16,6 +18,7 @@ class NewsFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadUsername()
         
 //        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
 //        
@@ -45,6 +48,22 @@ class NewsFeedViewController: UIViewController {
         count = 0
         loadPosts {
             self.showNextPost()
+        }
+    }
+    
+    func loadUsername() {
+        let ref = Firestore.firestore().collection("user").document(Auth.auth().currentUser!.uid)
+        ref.getDocument { snapshot, error in
+            guard let data = snapshot?.data() else { return }
+            self.username = data["username"] as? String
+            self.addPostButton.isEnabled = true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newPost" {
+            let viewController = segue.destination as! PostsViewController
+            viewController.post.username = username
         }
     }
     
@@ -79,6 +98,8 @@ class NewsFeedViewController: UIViewController {
         let post = posts[count]
         print(post)
         textField.text = post.caption
+        print(post.caption)
+        usernameField.text = post.username
 //        timestampField.text = "\(post.created.dateValue())"
         loadImage(for: post)
         

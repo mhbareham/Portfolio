@@ -19,10 +19,10 @@ class PostsViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    
     @IBAction func uploadButton(_ sender: Any) {
-        let image = self.imagePreview!
+//        let image = self.imagePreview!
         save(post)
-        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -30,10 +30,16 @@ class PostsViewController: UIViewController {
     }
     
     func save(_ post: Post) {
-        upload(post.image) { storageMeta, error in
+        guard let caption = captionText.text, let postImage = post.image else {
+            captionText.backgroundColor = .red
+            return
+        }
+        post.caption = caption
+        upload(postImage) { storageMeta, error in
             let ref = Firestore.firestore().collection("posts").document()
             post.imageDownloadURL = storageMeta?.name
             ref.setData(post.toDict()) { err in }
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -60,7 +66,6 @@ extension PostsViewController: UIImagePickerControllerDelegate, UINavigationCont
         let image = info[.originalImage] as! UIImage
         post.image = image
             self.imagePreview.image = image
-        post.caption = captionText.text!
         dismiss(animated:true, completion: nil)
     }
 }

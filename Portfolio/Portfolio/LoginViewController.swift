@@ -5,8 +5,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     
     @IBAction func signUp(_ sender: Any) {
+        guard let _ = usernameTextField.text else { return }
         Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { [unowned self] result, error in
             
             guard let user = result?.user else {
@@ -17,8 +19,21 @@ class LoginViewController: UIViewController {
                 }
                 return
             }
-            self.dismiss(animated: true, completion: nil)
+            self.setupAccount(for: user)
         }
+    }
+    
+    
+    
+    
+    func setupAccount(for user: User) {
+        
+        let userRef = Firestore.firestore().collection("user").document(user.uid)
+        
+        userRef.setData(["username": self.usernameTextField.text!], merge: true) { error in
+             self.dismiss(animated: true, completion: nil)
+        }
+       
     }
     
     @IBAction func login(_ sender: Any) {

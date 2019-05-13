@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMt-dP-JuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.8" y="-841.52923538230891"/>
+            <point key="canvasLocation" x="1415" y="-842"/>
         </scene>
         <!--NewsFeedViewController-->
         <scene sceneID="XPC-Xl-dhG">
@@ -135,16 +135,17 @@
                                 <action selector="signOutButton:" destination="RAh-RI-i8c" id="mqM-jv-TAp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tdv-Mh-W3o">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="Tdv-Mh-W3o">
                             <connections>
-                                <segue destination="bft-GR-xOg" kind="show" id="Lsv-qC-Iej"/>
+                                <segue destination="bft-GR-xOg" kind="show" identifier="newPost" id="Lsv-qC-Iej"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPostButton" destination="Tdv-Mh-W3o" id="KVG-4u-LRy"/>
                         <outlet property="imageView" destination="s37-If-sEQ" id="g7c-9U-1qK"/>
                         <outlet property="textField" destination="qNT-6z-njh" id="Fgf-SC-DqQ"/>
-                        <outlet property="timestampField" destination="4t4-pn-WfO" id="RKE-bA-YSX"/>
+                        <outlet property="usernameField" destination="4t4-pn-WfO" id="13B-xw-I84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpm-6r-3kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,7 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acN-MK-CnI" customClass="KaedeTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="76" y="251" width="223" height="30"/>
+                                <rect key="frame" x="76" y="226" width="223" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -225,39 +226,51 @@
                                     <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mA-ju-fqt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbd-Ti-Ypn">
+                                <rect key="frame" x="76" y="264" width="223" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.16135568945842582" green="0.16038948772514183" blue="0.16232189119170981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ba-WE-neW" secondAttribute="trailing" constant="150" id="3xl-Kv-tdW"/>
-                            <constraint firstItem="4Ba-WE-neW" firstAttribute="top" secondItem="IKq-5X-McE" secondAttribute="bottom" constant="1" id="91U-6C-iKe"/>
-                            <constraint firstItem="IKq-5X-McE" firstAttribute="top" secondItem="acN-MK-CnI" secondAttribute="bottom" constant="31" id="ABq-Kx-36D"/>
-                            <constraint firstItem="o4W-zL-6Jm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Kdv-Vc-aoQ"/>
-                            <constraint firstItem="T4q-O1-jMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="OBR-TC-rCa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKq-5X-McE" secondAttribute="trailing" constant="160" id="OuN-Dr-SuL"/>
-                            <constraint firstItem="IKq-5X-McE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="PfE-Sv-eyz"/>
-                            <constraint firstItem="o4W-zL-6Jm" firstAttribute="top" secondItem="T4q-O1-jMt" secondAttribute="bottom" constant="43" id="Qcw-I8-pVw"/>
-                            <constraint firstItem="acN-MK-CnI" firstAttribute="top" secondItem="o4W-zL-6Jm" secondAttribute="bottom" constant="33" id="SPa-Gx-nxH"/>
-                            <constraint firstItem="o4W-zL-6Jm" firstAttribute="top" secondItem="T4q-O1-jMt" secondAttribute="bottom" constant="43" id="Sem-e5-wqy"/>
-                            <constraint firstItem="acN-MK-CnI" firstAttribute="top" secondItem="o4W-zL-6Jm" secondAttribute="bottom" constant="33" id="V2d-5F-5dj"/>
-                            <constraint firstItem="acN-MK-CnI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="V4P-Q3-Yuf"/>
-                            <constraint firstItem="4Ba-WE-neW" firstAttribute="top" secondItem="IKq-5X-McE" secondAttribute="bottom" constant="1" id="aOd-YP-KQn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4q-O1-jMt" secondAttribute="trailing" constant="133" id="ckJ-7y-yFO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o4W-zL-6Jm" secondAttribute="trailing" constant="77" id="djb-Qe-4ue"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="acN-MK-CnI" secondAttribute="trailing" constant="76" id="fLB-Ix-1MF"/>
-                            <constraint firstItem="4Ba-WE-neW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="ikO-AB-SqQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ba-WE-neW" secondAttribute="bottom" constant="280" id="lgK-qC-R6k"/>
-                            <constraint firstItem="T4q-O1-jMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="xFU-wI-kEM"/>
+                            <constraint firstItem="4Ba-WE-neW" firstAttribute="top" secondItem="IKq-5X-McE" secondAttribute="bottom" constant="1" id="41j-rk-G0g"/>
+                            <constraint firstItem="acN-MK-CnI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="4YH-sO-QQa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="acN-MK-CnI" secondAttribute="trailing" constant="76" id="6Xm-2w-g90"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ba-WE-neW" secondAttribute="bottom" constant="280" id="CfN-Hm-SYx"/>
+                            <constraint firstItem="Dbd-Ti-Ypn" firstAttribute="top" secondItem="acN-MK-CnI" secondAttribute="bottom" constant="8" id="DQ1-IW-10q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ba-WE-neW" secondAttribute="trailing" constant="150" id="Dln-Mb-KUj"/>
+                            <constraint firstItem="acN-MK-CnI" firstAttribute="top" secondItem="o4W-zL-6Jm" secondAttribute="bottom" constant="8" id="FVJ-4J-bgE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o4W-zL-6Jm" secondAttribute="trailing" constant="77" id="KTX-Me-Yg5"/>
+                            <constraint firstItem="IKq-5X-McE" firstAttribute="top" secondItem="Dbd-Ti-Ypn" secondAttribute="bottom" constant="18" id="OrY-Le-DHU"/>
+                            <constraint firstItem="T4q-O1-jMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="Snz-le-P1D"/>
+                            <constraint firstItem="IKq-5X-McE" firstAttribute="top" secondItem="Dbd-Ti-Ypn" secondAttribute="bottom" constant="18" id="YHK-dw-bz7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4q-O1-jMt" secondAttribute="trailing" constant="133" id="ZY9-Ix-8k7"/>
+                            <constraint firstItem="o4W-zL-6Jm" firstAttribute="top" secondItem="T4q-O1-jMt" secondAttribute="bottom" constant="43" id="bY3-4Z-Kvo"/>
+                            <constraint firstItem="o4W-zL-6Jm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="fa1-zh-bbl"/>
+                            <constraint firstItem="acN-MK-CnI" firstAttribute="top" secondItem="o4W-zL-6Jm" secondAttribute="bottom" constant="8" id="hLJ-G2-kNc"/>
+                            <constraint firstItem="Dbd-Ti-Ypn" firstAttribute="top" secondItem="acN-MK-CnI" secondAttribute="bottom" constant="8" id="hlT-xz-wfc"/>
+                            <constraint firstItem="IKq-5X-McE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="kt1-DW-FIS"/>
+                            <constraint firstItem="T4q-O1-jMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="o2t-cP-rQW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbd-Ti-Ypn" secondAttribute="trailing" constant="76" id="qWq-rn-Yru"/>
+                            <constraint firstItem="Dbd-Ti-Ypn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="rmQ-vY-nn2"/>
+                            <constraint firstItem="4Ba-WE-neW" firstAttribute="top" secondItem="IKq-5X-McE" secondAttribute="bottom" constant="1" id="vtx-v9-bja"/>
+                            <constraint firstItem="4Ba-WE-neW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="waK-c7-JdB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKq-5X-McE" secondAttribute="trailing" constant="160" id="wfs-15-25R"/>
+                            <constraint firstItem="o4W-zL-6Jm" firstAttribute="top" secondItem="T4q-O1-jMt" secondAttribute="bottom" constant="43" id="zNK-MS-j9u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="o4W-zL-6Jm" id="Axc-d9-JUI"/>
                         <outlet property="passwordTextField" destination="acN-MK-CnI" id="mzZ-lj-3at"/>
+                        <outlet property="usernameTextField" destination="Dbd-Ti-Ypn" id="cP0-5G-tHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="-135"/>
+            <point key="canvasLocation" x="213.59999999999999" y="-135.38230884557723"/>
         </scene>
         <!--App Container View Controller-->
         <scene sceneID="je1-2x-eWi">
