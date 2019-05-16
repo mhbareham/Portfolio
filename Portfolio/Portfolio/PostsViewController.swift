@@ -4,13 +4,11 @@ import MobileCoreServices
 
 class PostsViewController: UIViewController {
     
-//@IBAction func signOut(_ sender: Any) {
-//    AppManager.shared.logout()
-//}
-    
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var captionText: UITextField!
+    
     var post = Post()
+    
     @IBAction func getPhotoButton(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -19,9 +17,7 @@ class PostsViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    
     @IBAction func uploadButton(_ sender: Any) {
-//        let image = self.imagePreview!
         save(post)
     }
     
@@ -69,4 +65,5 @@ extension PostsViewController: UIImagePickerControllerDelegate, UINavigationCont
         dismiss(animated:true, completion: nil)
     }
 }
+
 

@@ -15,6 +15,7 @@
 		6D6CA862225621E300983B2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D6CA861225621E300983B2D /* GoogleService-Info.plist */; };
 		6D6CA8642256247D00983B2D /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CA8632256247D00983B2D /* AppContainerViewController.swift */; };
 		6D6CA866225625E600983B2D /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CA865225625E600983B2D /* AppManager.swift */; };
+		6D815CD1228D744F007C570A /* Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D815CD0228D744F007C570A /* Icon.jpg */; };
 		6DCA6CF02281B6BD008B46CD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA6CEF2281B6BD008B46CD /* Post.swift */; };
 		6DCA6CF42281C7A1008B46CD /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA6CF32281C7A1008B46CD /* NewsFeedViewController.swift */; };
 		6DCA6CF62281D4D4008B46CD /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA6CF52281D4D4008B46CD /* PostsViewController.swift */; };
@@ -34,6 +35,7 @@
 		6D6CA861225621E300983B2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D6CA8632256247D00983B2D /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		6D6CA865225625E600983B2D /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		6D815CD0228D744F007C570A /* Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Icon.jpg; path = "Assets.xcassets/Icon-1.imageset/Icon.jpg"; sourceTree = "<group>"; };
 		6DCA6CEF2281B6BD008B46CD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		6DCA6CF32281C7A1008B46CD /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		6DCA6CF52281D4D4008B46CD /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				3C3EB70322520EFE00F67A6D /* Assets.xcassets */,
 				3C3EB70522520EFE00F67A6D /* LaunchScreen.storyboard */,
 				3C3EB70822520EFE00F67A6D /* Info.plist */,
+				6D815CD0228D744F007C570A /* Icon.jpg */,
 				6D6CA861225621E300983B2D /* GoogleService-Info.plist */,
 			);
 			path = Portfolio;
@@ -168,6 +171,7 @@
 			files = (
 				3C3EB70722520EFE00F67A6D /* LaunchScreen.storyboard in Resources */,
 				6D6CA862225621E300983B2D /* GoogleService-Info.plist in Resources */,
+				6D815CD1228D744F007C570A /* Icon.jpg in Resources */,
 				3C3EB70422520EFE00F67A6D /* Assets.xcassets in Resources */,
 				3C3EB70222520EFD00F67A6D /* Main.storyboard in Resources */,
 			);
