@@ -9,6 +9,7 @@ class PostsViewController: UIViewController {
     
     var post = Post()
     
+    //Photo button to launch the image picker
     @IBAction func getPhotoButton(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -25,6 +26,7 @@ class PostsViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    //save function to save the posts to database
     func save(_ post: Post) {
         guard let caption = captionText.text, let postImage = post.image else {
             captionText.backgroundColor = .red
@@ -39,6 +41,7 @@ class PostsViewController: UIViewController {
         }
     }
     
+    //uploads to firebase storage
     func upload(_ image: UIImage, completion: @escaping (StorageMetadata?, Error?) -> Void) {
         
         let uuid = UUID().uuidString
@@ -53,7 +56,8 @@ class PostsViewController: UIViewController {
    
 }
 
-    
+    //extensions are seperate to the view controller class
+
 extension PostsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)

@@ -29,6 +29,7 @@ class Post: CustomStringConvertible {
         created = data["created"] as? Timestamp
         username = data["username"] as? String
     }
+    //metadata for the document snapshot
     
     func toDict() -> [String: Any] {
         return [
