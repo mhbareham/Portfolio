@@ -171,7 +171,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acN-MK-CnI" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Password*" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acN-MK-CnI" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="76" y="297" width="262" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -188,18 +188,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKq-5X-McE">
-                                <rect key="frame" x="182" y="360" width="50" height="37"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.29411764709999999" green="0.65098039220000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCp-C8-zNU"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-QO-nlw" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AB5-CN-eZP" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="76" y="347" width="262" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.29411764709999999" green="0.65098039220000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Email*" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-QO-nlw" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="76" y="245" width="262" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -217,7 +223,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ba-WE-neW">
-                                <rect key="frame" x="172" y="415" width="70" height="37"/>
+                                <rect key="frame" x="172" y="429" width="70" height="38"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                 <color key="tintColor" red="0.29411764709999999" green="0.65098039220000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign up">
@@ -234,28 +240,45 @@
                                     <constraint firstAttribute="height" constant="88" id="290-0a-bwa"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKq-5X-McE">
+                                <rect key="frame" x="182" y="385" width="50" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.29411764709999999" green="0.65098039220000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCp-C8-zNU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16135568945842582" green="0.16038948772514183" blue="0.16232189119170981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="IKq-5X-McE" firstAttribute="top" secondItem="AB5-CN-eZP" secondAttribute="bottom" constant="8" symbolic="YES" id="7dJ-PF-MhI"/>
                             <constraint firstItem="JkS-QO-nlw" firstAttribute="trailing" secondItem="acN-MK-CnI" secondAttribute="trailing" id="EAi-LS-p3h"/>
                             <constraint firstItem="T4q-O1-jMt" firstAttribute="centerX" secondItem="IKq-5X-McE" secondAttribute="centerX" id="Jb7-pb-B47"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ba-WE-neW" secondAttribute="bottom" constant="395" id="M86-za-kSW"/>
+                            <constraint firstItem="4Ba-WE-neW" firstAttribute="centerX" secondItem="IKq-5X-McE" secondAttribute="centerX" id="O1f-xb-gAc"/>
+                            <constraint firstItem="4Ba-WE-neW" firstAttribute="top" secondItem="IKq-5X-McE" secondAttribute="bottom" constant="9" id="O66-7E-CH9"/>
                             <constraint firstItem="acN-MK-CnI" firstAttribute="top" secondItem="JkS-QO-nlw" secondAttribute="bottom" constant="22" id="PUg-wv-8Sn"/>
-                            <constraint firstItem="T4q-O1-jMt" firstAttribute="centerX" secondItem="4Ba-WE-neW" secondAttribute="centerX" id="UhF-xm-2TD"/>
+                            <constraint firstItem="AB5-CN-eZP" firstAttribute="trailing" secondItem="acN-MK-CnI" secondAttribute="trailing" id="WCn-5Y-fjM"/>
                             <constraint firstItem="T4q-O1-jMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJB-NK-2AT"/>
+                            <constraint firstItem="IKq-5X-McE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="385" id="Xlo-AW-2eh"/>
                             <constraint firstItem="T4q-O1-jMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="Zv2-yR-VpY"/>
                             <constraint firstItem="JkS-QO-nlw" firstAttribute="top" secondItem="T4q-O1-jMt" secondAttribute="bottom" constant="60" id="aDy-7R-aqv"/>
                             <constraint firstItem="JkS-QO-nlw" firstAttribute="leading" secondItem="acN-MK-CnI" secondAttribute="leading" id="aKh-sW-rc6"/>
                             <constraint firstItem="T4q-O1-jMt" firstAttribute="centerX" secondItem="acN-MK-CnI" secondAttribute="centerX" id="h71-pz-yho"/>
-                            <constraint firstItem="4Ba-WE-neW" firstAttribute="top" secondItem="IKq-5X-McE" secondAttribute="bottom" constant="18" id="mQ3-ei-5tM"/>
                             <constraint firstItem="T4q-O1-jMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="mpG-sP-WjY"/>
                             <constraint firstItem="JkS-QO-nlw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="nwO-KN-euA"/>
-                            <constraint firstItem="IKq-5X-McE" firstAttribute="top" secondItem="acN-MK-CnI" secondAttribute="bottom" constant="33" id="pwF-3Q-0Yz"/>
+                            <constraint firstItem="4Ba-WE-neW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tHr-1f-LJs"/>
+                            <constraint firstItem="AB5-CN-eZP" firstAttribute="leading" secondItem="acN-MK-CnI" secondAttribute="leading" id="zZ9-YM-5ya"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="JkS-QO-nlw" id="Ibg-h2-3G7"/>
                         <outlet property="passwordTextField" destination="acN-MK-CnI" id="mzZ-lj-3at"/>
+                        <outlet property="usernameTextField" destination="AB5-CN-eZP" id="fgb-iq-Jls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
